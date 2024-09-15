@@ -1,9 +1,12 @@
 import React from 'react'
 import './App.css'
-import Button from './components/Button/Button'
 import CardButton from './components/CardButton/CardButton'
 import JournalItem from './components/JournalItem/JournalItem'
 import LeftPanel from './layouts/LeftPanel/LeftPanel'
+import Header from './components/Header/Header'
+import JournalList from './components/JournalList/JournalList'
+import Body from './layouts/Body/Body'
+import JournalAddButton from './components/JournalAddButton/JournalAddButton'
 
 function App() {
   const data = [
@@ -21,27 +24,24 @@ function App() {
   return (
     <div className="app">
     <LeftPanel>
-
+      <Header/>
+      <JournalAddButton/>
+      <JournalList>
+        <CardButton>
+          <JournalItem
+          data={data[0]}
+          />
+        </CardButton>
+        <CardButton>
+          <JournalItem
+            data={data[1]}
+          />
+        </CardButton>
+      </JournalList>
     </LeftPanel>
     <Body>
-
+      Body
     </Body>
-      <h1>Заголовок</h1>
-      <p>Какой-то текст</p>
-      <Button/>
-      <CardButton>
-        Новое воспоминание
-      </CardButton>
-      <CardButton>
-        <JournalItem
-        data={data[0]}
-        />
-      </CardButton>
-      <CardButton>
-        <JournalItem
-          data={data[1]}
-        />
-      </CardButton>
     </div>
   )
 }
