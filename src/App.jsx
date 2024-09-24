@@ -7,8 +7,11 @@ import Header from './components/Header/Header'
 import JournalList from './components/JournalList/JournalList'
 import Body from './layouts/Body/Body'
 import JournalAddButton from './components/JournalAddButton/JournalAddButton'
+import { useState } from 'react';
+import Modal from 'react-modal';
 
 function App() {
+
   const data = [
     {
       title: 'Подготовка к обновлению курсов',
