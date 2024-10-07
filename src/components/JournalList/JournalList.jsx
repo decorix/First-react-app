@@ -2,7 +2,7 @@ import './JournalList.css'
 
 function JournalList({children}) {
   return (
-      <div className='journal-list'>{children}</div>
+      <div className='journal-list flex flex-col gap-[30px]'>{children}</div>
   )
 }
 
