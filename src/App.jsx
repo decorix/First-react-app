@@ -1,4 +1,4 @@
-import React from 'react';
+import { React } from 'react';
 import './App.css';
 import CardButton from './components/CardButton/CardButton';
 import JournalItem from './components/JournalItem/JournalItem';
@@ -7,7 +7,7 @@ import Header from './components/Header/Header';
 import JournalList from './components/JournalList/JournalList';
 import Body from './layouts/Body/Body';
 import JournalAddButton from './components/JournalAddButton/JournalAddButton';
-import Button from './components/Button/Button';
+import JournalForm from './components/JournalForm/JournalForm';
 
 
 
@@ -30,10 +30,6 @@ function App() {
       date: new Date()
     }
   ]
-
-  const inputChange = (event) => {
-    console.log(event.target.value);
-  }
 
   return (
     <div className="app flex p-[30px]">
@@ -59,8 +55,7 @@ function App() {
         </JournalList>
       </LeftPanel>
       <Body>
-        <Button/>
-        <input type="text" onChange={inputChange}/>
+        <JournalForm/>
       </Body>
     </div>
   )
